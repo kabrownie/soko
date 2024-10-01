@@ -1,14 +1,14 @@
 {% extends 'core/base.html'  %}
 
 {% block title %} 
-Sign up
+Login
 
 {% endblock %}
 
 {% block content %}
 
 <div class="w-1/2  p-6 my-6 mx-auto bg-blue-100 rounded-xl">
-    <h1 class="mb-6 text-3xl">Sign Up</h1>
+    <h1 class="mb-6 text-3xl">Login</h1>
 
     <form method="post" action=".">
         {% csrf_token %}
@@ -20,20 +20,13 @@ Sign up
             {{form.username}}
         </div>
 
-         <div class="mb-3">
-            <label class="inline-block mb-2">Email</label><br>
-            {{form.email}}
-        </div>
-
+         
          <div class="mb-3">
             <label class="inline-block mb-2">Password</label><br>
-            {{form.password1}}
+            {{form.password}}
         </div>
 
-         <div class="mb-3">
-            <label class="inline-block mb-2">Repeat Password</label><br>
-            {{form.password2}}
-        </div>
+         
 
         {%if form.errors or form.non_field_errors %}
             <div class="mb-3 p-6 bg-red-100 rounded-xl">
@@ -46,7 +39,7 @@ Sign up
     </div>
         {%endif%}
 
-        <button type="submit" formmethod="post" class=" px-6 py-3 text-lg font-semibold rounded-xl bg-blue-300 hover:bg-blue-500 border-b border-blue-300">Sign Up </button>
+        <button type="submit" formmethod="post" class=" px-6 py-3 text-lg font-semibold rounded-xl bg-blue-300 hover:bg-blue-500 border-b border-blue-300">Login </button>
 
     </form>
 </div>
