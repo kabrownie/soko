@@ -19,7 +19,7 @@
             {%if request.user.is_authenticated%}
            
             <a  href="#" class="px-6 py-3 text-lg font-semibold rounded-xl bg-blue-300 hover:bg-blue-500 border-b border-blue-300 ">Inbox</a>
-            <a  href="#" class="px-6 py-3 text-lg font-semibold rounded-xl bg-blue-300 hover:bg-blue-500 border-b border-blue-300 ">Dashboard</a>
+            <a  href="{%url 'dashboard:index'%}" class="px-6 py-3 text-lg font-semibold rounded-xl bg-blue-300 hover:bg-blue-500 border-b border-blue-300 ">Dashboard</a>
 
             {%else%}
             <a  href="{%url 'core:signup'%}" class="px-6 py-3 text-lg font-semibold rounded-xl bg-blue-300 hover:bg-blue-500 border-b border-blue-300 ">Sign up</a>
