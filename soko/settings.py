@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'core',
     'item',
     'dashboard',
+    'conversation',
      # other apps
     'django.contrib.humanize',
 ]
